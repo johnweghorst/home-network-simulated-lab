@@ -13,14 +13,14 @@ This lab will assume you’re already somewhat familiar with Packet Tracer, plac
 * Mobile devices (smartphone/tablet)
 * IoT devices (smart TV, camera, etc.)
 # VLAN and IPv4 Addressing
-| VLAN | Name       | Devices             | Subnet         | Gateway        | Notes                      |
-|------|------------|-------------------|----------------|----------------|----------------------------|
-| 10   | PC         | PC                 | 192.168.10.0/24 | 192.168.10.1  | PC Only             |
-| 20   | Mobile     | Smartphones/Tablets | 192.168.20.0/24 | 192.168.20.1  |     |
-| 30   | IoT        | Smart TV, camera   | 192.168.30.0/24 | 192.168.30.1  |     |
-| 40   | Gaming     | Laptop             | 192.168.40.0/24 | 192.168.40.1  |     |
-| 99   | Management | Admin PC           | 192.168.99.0/24 | 192.168.99.1  | SSH access to router only  |
 
+| VLAN | Name    | Purpose                         | Subnet            | Gateway         |
+|-----:|---------|---------------------------------|-------------------|-----------------|
+| 10   | Trusted | PC, Laptop, iPhones, iPads      | 192.168.10.0/24   | 192.168.10.1    |
+| 20   | Gaming | PS4, Gaming Laptop              | 192.168.20.0/24   | 192.168.20.1    |
+| 30   | IoT  | Ring, Smart TV                  | 192.168.30.0/24   | 192.168.30.1    |
+| 40   | Guest   | Guest devices                   | 192.168.40.0/24   | 192.168.40.1    |
+| 99   | Management    | Router, Switch, WLC / AP        | 192.168.99.0/24   | 192.168.99.1    |
 # Router Setup
 
 We’ll start with router configuration first. Place the router in the logical topology, open it and head to the CLI.
