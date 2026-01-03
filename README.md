@@ -22,7 +22,60 @@ This lab will assume you’re already somewhat familiar with Packet Tracer, plac
 | 40   | Guest   | Guest devices                   | 192.168.40.0/24   | 192.168.40.1    |
 | 99   | Management    | Router, Switch, WLC / AP        | 192.168.99.0/24   | 192.168.99.1    |
 # Router Setup
-
 We’ll start with router configuration first. Place the router in the logical topology, open it and head to the CLI.
-
 We’ll set a hostname of HomeRouter, set passwords for the console connection and virtual line passwords, the password for privileged exec mode and SSH access first. All passwords will be cisco just for ease. Use a secure password out of a lab environment of course. We will also encrypt our passwords and while this isn’t strong encryption, it will add a layer of security and it prevents passwords from being immediately readable by prying eyes in the running config.
+```
+Router> enable
+conf t
+service password-encryption
+```
+Next, we’ll name the router and setup passwords for privileged exec mode, the console line and the virtual terminal lines, as well as allowing connectivity via SSH only on them. The console line is for direct access and the VTY lines are for remote access over the network. We use login local for SSH because we want it username AND password protected for security purposes since the data is going over the network. 
+```
+hostname HomeRouter
+enable secret cisco
+line con 0
+password cisco
+login
+line vty 0 15
+password cisco
+login local
+transport input ssh
+```
+Because of password-encryption, our passwords are encrypted in the running config (show run command).
+<img width="975" height="295" alt="image" src="https://github.com/user-attachments/assets/1456928f-fb7f-4458-8d06-e24bd48d63e3" />
+<img width="628" height="508" alt="image" src="https://github.com/user-attachments/assets/2b49473f-e388-4e4e-abb5-2ace7968b7ae" />
+
+Exit to get back to global configuration mode.
+
+Here, we will also set a banner message that will display a warning message if someone happens to get unwanted access to the router (via SSH, for example). While it doesn’t prevent access, it serves as a legal deterrent by clearly stating that access is restricted to authorized users only. if illegal activity was performed or your public IP address was used maliciously, a banner can help establish intent and provide notice.
+```
+banner motd #Unauthorized access to this system is prohibited. Activities may be monitored and logged. Disconnect immediately if you are not an authorized user.#
+```
+<img width="975" height="522" alt="image" src="https://github.com/user-attachments/assets/a1d81b3b-f7d5-4dc1-b755-f991bced5ea5" />
+Next, will we set up the domain name that is required to generate the RSA keys for SSH. SSH requires a domain name to generate a unique cryptographic key pair. We’ll also set a username and password for logging in via SSH. We’ll also set SSH version to 2 because SSH version 1 limits defense against new threats and has numerous documented vulnerabilities.
+```
+ip-domain name mydomain.com
+crypto key generate rsa 1024
+username admin privilege 15 secret cisco
+ip ssh version 2
+```
+We also need to set up DNS so our router can resolve domain names. We’ll use google’s public DNS server for this so we can also set up a DNS server to see how they function.
+
+```
+ip name-server 8.8.8.8
+```
+
+Here is what’s shown in the running config.
+
+<img width="623" height="167" alt="image" src="https://github.com/user-attachments/assets/e45c3440-007a-4b7c-b6bc-8f9e5d0b4223" />
+
+We’ll go ahead and set up the DNS server now as well. Drag a server and place an Ethernet connection (copper straight-through in Packet Tracer) between G0/0/1 on the HomeRouter and FastEthernet0 on the server.
+In this simulated lab setup, our DNS server will act as Google’s public DNS and provide name resolution for internal devices. Because Packet Tracer can’t simulate actual Internet, the server will have a default gateway of HomeRouter’s outside interface IP address. This is only to simulate the outside connection to Google’s public DNS server (8.8.8.8). Open up the server and head to Desktop > IP Configuration.
+
+<img width="975" height="986" alt="image" src="https://github.com/user-attachments/assets/3fb2c1eb-2d58-4c8e-8858-5ae4c8cb32e5" />
+
+Next, we’ll add some domain names to the server for address resolution. Head to the Services tab then choose DNS. Turn it on and add some A records. An A record maps a specific IPv4 address to a domain name.
+
+<img width="975" height="975" alt="image" src="https://github.com/user-attachments/assets/34aff786-41e5-4137-aa5b-7c885b7a8bf4" />
+
+
