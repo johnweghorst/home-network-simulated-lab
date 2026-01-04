@@ -1,4 +1,4 @@
-# Home Network Simulated Lab
+# Home Network Simulated Lab in Cisco Packet Tracer
 
 Welcome! The goal of this lab in Cisco Packet Tracer is to design and simulate a segmented home network topology that separates PCs, a gaming device (will use a laptop), mobile devices, and IoT devices to improve security and manageability.
 
