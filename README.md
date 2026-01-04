@@ -14,9 +14,6 @@ Some liberties are taken due to the limitations of Packet Tracer, and the scope 
 # Tools & Software
 * Cisco Packet Tracer
 * Cisco IOS 
-* Windows-based end devices (PC & laptop)
-* Mobile devices (smartphone/tablet)
-* IoT devices (smart TV, camera, etc.)
 
 # Core Device list
 * Cisco ISR 1941 Router
