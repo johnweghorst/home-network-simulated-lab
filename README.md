@@ -198,10 +198,8 @@ We can ping the DNS server to verify connectivity there as well.
 
 <img width="975" height="865" alt="image" src="https://github.com/user-attachments/assets/a64c9ede-a0e5-4add-8f9d-f9a6c7cff8f4" />
 
-With DHCP successfully configured, we can set up the NAT and ACLs. NAT will allow our devices to use the router’s outside global IP address for communications outside of our network. Since most ISPs will only distribute one public IP for customers, this is essential to be able to connect over the internet. We will implement NAT overload which will add an ephemeral port number to our router’s public IP address so all of our internal devices are able to use the same IP address for outside communication.
-
 # NAT & ACLs
 
-
+With DHCP successfully configured, we can set up the NAT and ACLs. NAT will allow our devices to use the router’s outside global IP address for communications outside of our network. Since most ISPs will only distribute one public IP for customers, this is essential to be able to connect over the internet. We will implement NAT overload which will add an ephemeral port number to our router’s public IP address so all of our internal devices are able to use the same IP address for outside communication.
 
 
