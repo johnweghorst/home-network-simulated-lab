@@ -84,9 +84,11 @@ Here, we will also set a banner message that will display a warning message if s
 banner motd #Unauthorized access to this system is prohibited. Activities may be monitored and logged. Disconnect immediately if you are not an authorized user.#
 ```
 <img width="975" height="522" alt="image" src="https://github.com/user-attachments/assets/a1d81b3b-f7d5-4dc1-b755-f991bced5ea5" />
-Next, will we set up the domain name that is required to generate the RSA keys for SSH. SSH requires a domain name to generate a unique cryptographic key pair. We’ll also set a username and password for logging in via SSH. We’ll also set SSH version to 2 because SSH version 1 limits defense against new threats and has numerous documented vulnerabilities.
+
 
 # SSH setup 
+Next, will we set up the domain name that is required to generate the RSA keys for SSH. SSH requires a domain name to generate a unique cryptographic key pair. We’ll also set a username and password for logging in via SSH. We’ll also set SSH version to 2 because SSH version 1 limits defense against new threats and has numerous documented vulnerabilities.
+
 ```
 ip domain name mydomain.com
 crypto key generate rsa 1024
