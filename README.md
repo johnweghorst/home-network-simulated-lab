@@ -69,13 +69,5 @@ Here is what’s shown in the running config.
 
 <img width="623" height="167" alt="image" src="https://github.com/user-attachments/assets/e45c3440-007a-4b7c-b6bc-8f9e5d0b4223" />
 
-We’ll go ahead and set up the DNS server now as well. Drag a server and place an Ethernet connection (copper straight-through in Packet Tracer) between G0/0/1 on the HomeRouter and FastEthernet0 on the server.
-In this simulated lab setup, our DNS server will act as Google’s public DNS and provide name resolution for internal devices. Because Packet Tracer can’t simulate actual Internet, the server will have a default gateway of HomeRouter’s outside interface IP address. This is only to simulate the outside connection to Google’s public DNS server (8.8.8.8). Open up the server and head to Desktop > IP Configuration.
-
-<img width="975" height="986" alt="image" src="https://github.com/user-attachments/assets/3fb2c1eb-2d58-4c8e-8858-5ae4c8cb32e5" />
-
-Next, we’ll add some domain names to the server for address resolution. Head to the Services tab then choose DNS. Turn it on and add some A records. An A record maps a specific IPv4 address to a domain name.
-
-<img width="975" height="975" alt="image" src="https://github.com/user-attachments/assets/34aff786-41e5-4137-aa5b-7c885b7a8bf4" />
 
 
