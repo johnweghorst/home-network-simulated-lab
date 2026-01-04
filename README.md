@@ -117,7 +117,7 @@ Next, we’ll add some domain names to the server for address resolution. Head t
 That’s all for the DNS server.
 
 # Switch configuration
-Perform the same basic set up steps on the switch as did the router. After, we’ll configure the VLANs and the trunks on the switch, one to the router and one to our WLC, then add our wired connections to their respective VLANs. We will also set up the switch’s SVI (switched virtual interface) so we can connect with SSH over the network. This will require adding a default gateway to the router as well. It is best practice to change the native VLAN to an unused VLAN. SSH configuration will be shown again for redundancy and because it is a crucial step.
+Perform the same basic set up steps on the switch as we did the router. After, we’ll configure the VLANs and the trunks on the switch, one to the router and one to our WLC, then add our wired connections to their respective VLANs. We will also set up the switch’s SVI (switched virtual interface) so we can connect with SSH over the network. This will require adding a default gateway to the router as well. It is best practice to change the native VLAN to an unused VLAN. SSH configuration will be shown again for redundancy and because it is a crucial step.
 
 ```
 vlan 10
