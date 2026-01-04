@@ -75,7 +75,8 @@ transport input none
 ```
 Because of password-encryption, our passwords are encrypted in the running config (show run command).
 <img width="975" height="295" alt="image" src="https://github.com/user-attachments/assets/1456928f-fb7f-4458-8d06-e24bd48d63e3" />
-<img width="628" height="508" alt="image" src="https://github.com/user-attachments/assets/2b49473f-e388-4e4e-abb5-2ace7968b7ae" />
+<img width="477" height="411" alt="image" src="https://github.com/user-attachments/assets/c9bde59c-ca63-4ee7-94d4-6f13eb30e426" />
+
 
 Exit to get back to global configuration mode.
 
