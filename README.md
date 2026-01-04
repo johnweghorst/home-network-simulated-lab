@@ -103,6 +103,7 @@ Here is what’s shown in the running config.
 
 <img width="598" height="156" alt="image" src="https://github.com/user-attachments/assets/08613b52-e358-469a-863b-8986737c4f7e" />
 
+# DNS Setup
 
 We’ll go ahead and set up the DNS server now as well. The server will have a default gateway of HomeRouter’s outside interface IP address (203.0.113.1). Open up the server and head to Desktop > IP Configuration.
 
@@ -112,13 +113,16 @@ Next, we’ll add some domain names to the server for address resolution. Head t
 
 <img width="975" height="975" alt="image" src="https://github.com/user-attachments/assets/7b42682d-ad03-4827-a193-c216fa6965ee" />
 
-We’ll set the router’s outside IP address now as well.
+That’s all for the DNS server. Back at the router, we’ll set the router’s outside IP address now as well.
+
+# Router configuration continued 
 ```
 int g0/1
 ip add 203.0.113.1 255.255.255.252
 no shut
 ```
 We’ll ping from the router to verify connectivity.
+
 
 <img width="975" height="293" alt="image" src="https://github.com/user-attachments/assets/c4d74e68-bc88-473f-839c-a9d20e445eea" />
 
