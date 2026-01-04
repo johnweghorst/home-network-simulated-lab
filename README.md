@@ -200,6 +200,7 @@ We can ping the DNS server to verify connectivity there as well.
 
 # NAT & ACLs
 
-With DHCP successfully configured, we can set up the NAT and ACLs. NAT will allow our devices to use the router’s outside global IP address for communications outside of our network. Since most ISPs will only distribute one public IP for customers, this is essential to be able to connect over the internet. We will implement NAT overload which will add an ephemeral port number to our router’s public IP address so all of our internal devices are able to use the same IP address for outside communication.
+With DHCP successfully configured, we can set up the NAT and ACLs. NAT will allow our devices to use the router’s outside global IP address for communications outside of our network. Since most ISPs will only distribute one public IP for customers, this is essential to be able to connect over the internet with all of our devices. We will implement NAT overload, known as PAT (port address translation), which will add an ephemeral port number to our router’s public IP address so all of our internal devices are able to use the same IP address for outside communication. (ex: 203.0.113.1:45678 for the Desktop PC, 203.0.113.1:43256 for a Guest phone).
 
+These commands will identify the inside interfaces (our internal VLAN sub-interfaces where our private IPs reside) and the outside interface (the router’s public IP) to perform the translation.
 
