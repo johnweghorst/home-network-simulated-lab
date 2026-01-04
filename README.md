@@ -44,7 +44,8 @@ The topology will be simply organized by VLANs in numerical order, and the devic
 * Switch Fa0/1 to Desktop PC.
 * Switch Fa0/2 to Gaming Laptop.
 
-<img width="975" height="612" alt="image" src="https://github.com/user-attachments/assets/b0a7a2fa-1256-4e3a-a15d-02dd51911be0" />
+<img width="975" height="669" alt="image" src="https://github.com/user-attachments/assets/39e33b4f-ba0e-4d15-8be6-fda4c8b217d8" />
+
 
 
 # Router Setup
