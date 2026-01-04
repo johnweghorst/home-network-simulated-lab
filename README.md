@@ -111,9 +111,11 @@ Next, we’ll add some domain names to the server for address resolution. Head t
 
 <img width="975" height="975" alt="image" src="https://github.com/user-attachments/assets/7b42682d-ad03-4827-a193-c216fa6965ee" />
 
-That’s all for the DNS server. Back at the router, we’ll set the router’s outside IP address now as well.
+That’s all for the DNS server.
 
 # Router configuration continued 
+ Back at the router, we’ll set the router’s outside IP address now as well.
+ 
 ```
 int g0/1
 ip add 203.0.113.1 255.255.255.252
