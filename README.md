@@ -116,6 +116,86 @@ Next, we’ll add some domain names to the server for address resolution. Head t
 
 That’s all for the DNS server.
 
+# Switch configuration
+Perform the same basic set up steps on the switch as did the router. After, we’ll configure the VLANs and the trunks on the switch, one to the router and one to our WLC, then add our wired connections to their respective VLANs. We will also set up the switch’s SVI (switched virtual interface) so we can connect with SSH over the network. This will require adding a default gateway to the router as well. It is best practice to change the native VLAN to an unused VLAN. SSH configuration will be shown again for redundancy and because it is a crucial step.
+
+```
+vlan 10
+ name Trusted
+vlan 20
+ name Gaming
+vlan 30
+ name Untrusted
+vlan 99
+ name Management
+vlan 999
+ name Native
+```
+
+<img width="955" height="527" alt="image" src="https://github.com/user-attachments/assets/1b6daaa9-2d93-47da-9dd8-4877c4c394e8" />
+
+
+```
+int g0/1
+ description Trunk to Router
+ switchport mode trunk
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 10,20,30,99,999
+
+int g0/2
+ description Trunk to WLC / AP
+ switchport mode trunk
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 10,20,30,99,999
+
+int f0/1
+ switchport mode access
+ switchport access vlan 10
+
+int f0/2
+switchport mode access
+switchport access vlan 10
+```
+
+Verify our trunk ports with show int trunk: 
+
+<img width="975" height="418" alt="image" src="https://github.com/user-attachments/assets/af41324a-358b-4ff1-b8be-c4bbf576771a" />
+
+And the running config:
+
+<img width="864" height="188" alt="image" src="https://github.com/user-attachments/assets/3ff655a1-9f43-40a0-bb47-517601e64194" />
+
+We’ll also test our connection to the default gateway with ping.
+
+<img width="975" height="170" alt="image" src="https://github.com/user-attachments/assets/1e520681-2c83-4411-bbfc-da8869d5387d" />
+
+Successful! Our switch is correctly configured. We can view the VLANs to verify our configuration is correct.
+
+<img width="975" height="492" alt="image" src="https://github.com/user-attachments/assets/8651af8b-6a33-45a4-a224-d8f3213c1a46" />
+
+# SSH setup on the switch
+Make sure the switch has been named as this is necessary for SSH configuration.
+```
+ip domain name mydomain.com
+crypto key generate rsa 1024
+username admin privilege 15 secret cisco
+ip ssh version 2
+line vty 0 4
+login local
+transport input ssh
+int vlan 99
+ip add 192.168.99.2 255.255.255.0
+no shut
+exit
+ip default-gateway 192.168.99.1
+```
+
+
+
+
+
+
+
 # Router configuration continued 
  Back at the router, we’ll set the router’s outside IP address now as well.
  
