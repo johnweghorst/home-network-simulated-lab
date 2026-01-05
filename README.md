@@ -44,7 +44,7 @@ The topology will be simply organized by VLANs in numerical order, and the devic
 |---------|-----------|-----------------|----------------|-------------------------------------------------|
 | 10      | Trusted  | 192.168.10.0/24 | 192.168.10.1  | PCs and mobile devices; trusted network        |
 | 20      | Gaming   | 192.168.20.0/24 | 192.168.20.1  | Gaming laptops/consoles                        |
-| 30      | IoT/Guest     | 192.168.30.0/24 | 192.168.30.1  | IoT devices: smart TVs, Guest phone, Ring doorbell   |
+| 30      | Untrusted     | 192.168.30.0/24 | 192.168.30.1  | IoT devices: smart TVs, Guest phone, Ring doorbell   |
 | 99      | Management    | 192.168.99.0/24 | 192.168.99.1  | Router, switch, WLC management devices        |
 | 999     | Native   | n/a             | n/a            | Native VLAN for trunk ports; unused            |
 
