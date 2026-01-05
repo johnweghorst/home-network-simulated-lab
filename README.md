@@ -332,6 +332,8 @@ ip nat inside source list Nat_Inside interface g0/1 overload
 ```
 Check our configurations with the show access-lists command and the running config.
 
+<img width="807" height="583" alt="image" src="https://github.com/user-attachments/assets/233a3ba7-6b44-4828-b508-a8758aa0541d" />
+<img width="975" height="249" alt="image" src="https://github.com/user-attachments/assets/78d0f3f6-7188-42d4-b944-b439fd5a64ad" />
 
  
 
