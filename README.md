@@ -282,7 +282,7 @@ Our router, switch, and WLC will be configured with static IPs (192.168.99.1, .2
 
 <img width="975" height="783" alt="image" src="https://github.com/user-attachments/assets/d5b937dd-bfb6-4a6b-b535-1303913e473d" />
 
-We can check that our DHCP set up is successful by changing our Desktop PC for DNS. Open up the Desktop PC and head to Desktop > IP config and choose DHCP. Success.
+We can check that our DHCP set up is successful by changing our Desktop PC to DHCP. Open up the Desktop PC and head to Desktop > IP config and choose DHCP. Success.
 
 <img width="975" height="494" alt="image" src="https://github.com/user-attachments/assets/61212bc3-bc7a-4d43-b14b-39f99387e1ee" />
 
