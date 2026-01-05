@@ -77,6 +77,8 @@ login local
 transport input none
 ```
 
+We can check our configurations in the running config with the show run command from privileged exec mode.
+
 <img width="975" height="286" alt="image" src="https://github.com/user-attachments/assets/3fcbfab7-e077-48c2-801c-d2387bf477c7" />
 <img width="477" height="411" alt="image" src="https://github.com/user-attachments/assets/a16b97f3-0b25-4206-a703-44fa7a297113" />
 
