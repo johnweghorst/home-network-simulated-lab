@@ -280,7 +280,7 @@ DHCP is configured for our management network so our LAP can get an IP address a
 
 Our router, switch, and WLC will be configured with static IPs (192.168.99.1, .2, and .3 respectfully) because we don’t want their IP addresses to change. We can check our configuration in the running config. For the excluded IPs, .2 isn’t show because it’s configured as a range of excluded IPs.
 
-<img width="975" height="783" alt="image" src="https://github.com/user-attachments/assets/d5b937dd-bfb6-4a6b-b535-1303913e473d" />
+<img width="661" height="434" alt="image" src="https://github.com/user-attachments/assets/e27603a1-ecaa-4ed0-a5c6-320ff6eb05aa" />
 
 We can check that our DHCP set up is successful by changing our Desktop PC to DHCP. Open up the Desktop PC and head to Desktop > IP config and choose DHCP. Success.
 
