@@ -6,7 +6,7 @@ This lab will be implementing VLANs to isolate devices, NAT, DHCP and DNS to pro
 
 However, it is important to note that this lab takes liberties to simulate an enterprise-style deployment to demonstrate CCNA-level knowledge, as well as work around the limits of Packet Tracer.
 
-This lab will assume you’re already somewhat familiar with Packet Tracer, placing devices and connections, basic Cisco commands and how to navigate IOS. If you aren't, it's best to watch a basic tutorial on how set things devices and connections up. I won’t include every screenshot of entering commands but the commands and configurations will be shown so the lab can be reproduced. Additional configurations, such as port security and ACLs, are included to demonstrate security best practices and aren’t strictly necessary for a home network but are beneficial to implement. 
+This lab will assume you’re already somewhat familiar with Packet Tracer, placing devices and connections, basic Cisco commands and how to navigate IOS. If you aren't, it's best to watch a basic tutorial on how set things devices and connections up. I won’t include every screenshot of entering commands but the commands and configurations will be shown so the lab can be reproduced. Access control lists are included to demonstrate security best practices and aren’t strictly necessary for a home network but are beneficial to implement. 
 Some liberties are taken due to the limitations of Packet Tracer, and the scope of this lab is intended to be at CCNA-level.
 
 The Packet Tracer is also be included.
