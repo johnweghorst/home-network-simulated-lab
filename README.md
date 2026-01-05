@@ -44,7 +44,7 @@ The topology will be simply organized by VLANs in numerical order, and the devic
 |---------|-----------|-----------------|----------------|-------------------------------------------------|
 | 10      | Trusted  | 192.168.10.0/24 | 192.168.10.1  | PCs and mobile devices; trusted network        |
 | 20      | Gaming   | 192.168.20.0/24 | 192.168.20.1  | Gaming laptops/consoles                        |
-| 30      | Untrusted     | 192.168.30.0/24 | 192.168.30.1  | IoT devices: smart TVs, Guest phone, Ring doorbell   |
+| 30      | IoT_Guest     | 192.168.30.0/24 | 192.168.30.1  | IoT devices: smart TVs, Guest phone, Ring doorbell   |
 | 99      | Management    | 192.168.99.0/24 | 192.168.99.1  | Router, switch, WLC management devices        |
 | 999     | Native   | n/a             | n/a            | Native VLAN for trunk ports; unused            |
 
@@ -130,14 +130,14 @@ name Trusted
 vlan 20
 name Gaming
 vlan 30
-name Untrusted
+name IoT_Guest
 vlan 99
 name Management
 vlan 999
 name Native
-```
 
-<img width="955" height="527" alt="image" src="https://github.com/user-attachments/assets/62131e3e-1995-453f-aa81-f00f0e1cadad" />
+```
+<img width="602" height="309" alt="image" src="https://github.com/user-attachments/assets/5921e698-64af-467c-9b04-f5451e5eb653" />
 
 ```
 int g0/1
@@ -179,7 +179,7 @@ We’ll also test our connection to the default gateway with ping.
 
 Successful! Our switch is correctly configured. We can view the VLANs with show the vlan brief command to verify our configuration is correct.
 
-<img width="975" height="471" alt="image" src="https://github.com/user-attachments/assets/9a949d31-fcfe-4953-9c9c-c63b0b3efe2c" />
+<img width="703" height="325" alt="image" src="https://github.com/user-attachments/assets/9ee5bd7a-4114-4e76-abbf-e151f513bfa6" />
 
 # SSH setup 
 Make sure the switch has been named as this is necessary for SSH configuration. From global config mode:
