@@ -126,35 +126,35 @@ Perform the same basic set up steps on the switch as we did the router. After, w
 
 ```
 vlan 10
- name Trusted
+name Trusted
 vlan 20
- name Gaming
+name Gaming
 vlan 30
- name Untrusted
+name Untrusted
 vlan 99
- name Management
+name Management
 vlan 999
- name Native
+name Native
 ```
 
 <img width="955" height="527" alt="image" src="https://github.com/user-attachments/assets/62131e3e-1995-453f-aa81-f00f0e1cadad" />
 
 ```
 int g0/1
- description Trunk to Router
- switchport mode trunk
- switchport trunk native vlan 999
- switchport trunk allowed vlan 10,20,30,99,999
+description Trunk to Router
+switchport mode trunk
+switchport trunk native vlan 999
+switchport trunk allowed vlan 10,20,30,99,999
 
 int g0/2
- description Trunk to WLC / AP
- switchport mode trunk
- switchport trunk native vlan 99
- switchport trunk allowed vlan 10,20,30,99,999
+description Trunk to WLC / AP
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 10,20,30,99,999
 
 int f0/1
- switchport mode access
- switchport access vlan 10
+switchport mode access
+switchport access vlan 10
 
 int f0/2
 switchport mode access
@@ -251,29 +251,29 @@ From global config mode:
 ip dhcp excluded-address 192.168.99.1 192.168.99.3
 
 ip dhcp pool Trusted
- network 192.168.10.0 255.255.255.0
- default-router 192.168.10.1
- dns-server 203.0.113.2
+network 192.168.10.0 255.255.255.0
+default-router 192.168.10.1
+dns-server 203.0.113.2
 
 ip dhcp pool Gaming
- network 192.168.20.0 255.255.255.0
- default-router 192.168.20.1
- dns-server 203.0.113.2
+network 192.168.20.0 255.255.255.0
+default-router 192.168.20.1
+dns-server 203.0.113.2
 
 ip dhcp pool IoT
- network 192.168.30.0 255.255.255.0
- default-router 192.168.30.1
- dns-server 203.0.113.2
+network 192.168.30.0 255.255.255.0
+default-router 192.168.30.1
+dns-server 203.0.113.2
  
 ip dhcp pool Guest
- network 192.168.40.0 255.255.255.0
- default-router 192.168.40.1
- dns-server 203.0.113.2
+network 192.168.40.0 255.255.255.0
+default-router 192.168.40.1
+dns-server 203.0.113.2
 
 ip dhcp pool Management
- network 192.168.99.0 255.255.255.0
- default-router 192.168.99.1
- dns-server 203.0.113.2
+network 192.168.99.0 255.255.255.0
+default-router 192.168.99.1
+dns-server 203.0.113.2
  ```
 
 DHCP is configured for our management network so our LAP can get an IP address automatically and recognize the WLC. This also leaves the option open for adding more LAPs in the future.
@@ -298,17 +298,17 @@ These commands will identify the inside interfaces (our internal VLAN sub-interf
 From global config mode:
 
 ```
- int g0/1
- ip nat outside
+int g0/1
+ip nat outside
 
 int g0/0.10
- ip nat inside
+ip nat inside
 
 int g0/0.20
- ip nat inside
+ip nat inside
 
 int g0/0.30
- ip nat inside
+ip nat inside
 ```
 Management VLAN is not needed for NAT as we won’t be connecting to the internet. 
 
@@ -336,19 +336,19 @@ Check our configurations with the show access-lists command and the running conf
 
  
 
-Normally, we can see the NAT translation in action but due to how I’ve designed this network, no translations are occurring since everything is a directly connected route in the router’s routing table. But in a true network, the commands
+Normally, we can see the NAT translation in action but due to how I’ve designed this network, no translations are occurring because all devices are part of directly connected routes in the router’s routing table. In a typical network setup, however, the commands
 
 ```
 Show ip nat statistics *
 ```
 
-And 
+and 
 
 ```
 Show ip nat translations
 ```
 
-Will show the translated internal addresses as the router’s public IP address.
+will show the translated internal addresses as the router’s public IP address.
 
 # Access Control Lists
 
@@ -393,7 +393,7 @@ Configure the following on both the router and switch:
 ip access-list extended Mgmt_Only
 permit ip 192.168.10.0 0.0.0.255 any
 line vty 0 4
- access-class Mgmt_Only in
+access-class Mgmt_Only in
 ```
 
 Once again we’ll check our configurations are right with show access-lists.
