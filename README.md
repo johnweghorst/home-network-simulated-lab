@@ -576,11 +576,6 @@ In reality, I would just purchase an all-in-one unit that can perform all of the
 
 
 
-<img width="975" height="617" alt="image" src="https://github.com/user-attachments/assets/1ae1f023-e014-4fd0-b067-905c74341b3d" />
-
-
-
-
 
 
 
