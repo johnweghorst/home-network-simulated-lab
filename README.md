@@ -82,7 +82,7 @@ We can check our configurations in the running config with the show run command 
 <img width="975" height="286" alt="image" src="https://github.com/user-attachments/assets/3fcbfab7-e077-48c2-801c-d2387bf477c7" />
 <img width="477" height="411" alt="image" src="https://github.com/user-attachments/assets/a16b97f3-0b25-4206-a703-44fa7a297113" />
 
-Exit to get back to global configuration mode.
+Back to global configuration mode.
 Here, we will also set a banner message that will display a warning message if someone happens to get unwanted access to the router (via SSH, for example). While it doesn’t prevent access, it serves as a legal deterrent by clearly stating that access is restricted to authorized users only. if illegal activity was performed or your public IP address was used maliciously, a banner can help establish intent and provide notice.
 
 ```
