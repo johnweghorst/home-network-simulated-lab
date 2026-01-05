@@ -1,6 +1,6 @@
 # Home Network Simulated Lab in Cisco Packet Tracer
 
-Welcome! The goal of this lab in Cisco Packet Tracer is to design and simulate a segmented home network topology that separates PCs, a gaming device (will use a laptop), mobile devices, and IoT devices to improve security and manageability.
+Welcome! The goal of this lab in Cisco Packet Tracer is to design and simulate a segmented home network topology that separates PCs, gaming devices, mobile devices, and IoT/Guest devices to improve security and manageability.
 
 This lab will be implementing VLANs to isolate devices, NAT, DHCP and DNS to provide automated IP addressing and name resolution, inter-VLAN routing to allow communication between networks, and basic security configurations to restrict unnecessary access between VLANs. We will also be implementing access control lists (ACLs) to allow only the PC access to the router via SSH and for strict policing for the IoT devices. For the Wi-Fi, we’ll be configuring a Wireless LAN Controller and Lightweight Access Point for the wireless VLAN routing. In reality for a small home network, a combo unit of a router, WLC and AP could be purchased, and a separate WLC isn’t necessary. 
 
