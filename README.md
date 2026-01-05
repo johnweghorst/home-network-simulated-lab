@@ -38,8 +38,6 @@ The topology will be simply organized by VLANs in numerical order, and the devic
 * Switch Fa0/2 to Gaming Laptop. 
 * Switch Fa0/3 to LAP Gi1.
 
-* 
-
 # VLAN and IPv4 Addressing
 
 | VLAN ID | Name      | Subnet           | Gateway        | Devices / Description                            |
