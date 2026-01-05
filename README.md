@@ -122,7 +122,7 @@ Next, we’ll add some domain names to the server for address resolution. Head t
 That’s all for the DNS server. We’ll set up the switch now so we can start using ping to verify connectivity.
 
 # Switch configuration
-Perform the same basic set up steps on the switch as we did the router. After, we’ll configure the VLANs and the trunks on the switch, one to the router and one to our WLC, then add our wired connections to their respective VLANs. We will also set up the switch’s SVI (switched virtual interface) so we can connect with SSH over the network. This will require adding a default gateway to the router as well. It is best practice to change the native VLAN to an unused VLAN. For the WLC, the native vlan must be the management VLAN. SSH configuration will be shown again for redundancy and because it is a crucial step. From global config mode:
+Perform the same basic set up steps on the switch as we did the router. After, we’ll configure the VLANs and the trunks on the switch, one to the router and one to our WLC, then add our wired connections to their respective VLANs. We will also set up the switch’s SVI (switched virtual interface) so we can connect with SSH over the network. This will require adding a default gateway to the router as well. It is best practice to change the native VLAN to an unused VLAN. For the WLC, the trunk native vlan must be the management VLAN as this is one of the limitations of Packet Tracer. SSH configuration will be shown again for redundancy and because it is a crucial step. From global config mode:
 
 ```
 vlan 10
@@ -149,7 +149,7 @@ int g0/1
 int g0/2
  description Trunk to WLC / AP
  switchport mode trunk
- switchport trunk native vlan 999
+ switchport trunk native vlan 99
  switchport trunk allowed vlan 10,20,30,99,999
 
 int f0/1
