@@ -105,7 +105,7 @@ ip ssh version 2
 
 We also need to set up DNS so our router can resolve domain names.
 ```
-ip name-server 203.0.113.1
+ip name-server 203.0.113.2
 ```
 Here is what’s shown in the running config.
 
