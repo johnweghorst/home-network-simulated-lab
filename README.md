@@ -9,7 +9,7 @@ However, it is important to note that this lab takes liberties to simulate an en
 This lab will assume you’re already somewhat familiar with Packet Tracer, placing devices and connections, basic Cisco commands and how to navigate IOS. If you aren't, it's best to watch a basic tutorial on how set things devices and connections up. I won’t include every screenshot of entering commands but the commands and configurations will be shown so the lab can be reproduced. 
 Some liberties are taken due to the limitations of Packet Tracer, and the scope of this lab is intended to be at CCNA-level.
 
-The Packet Tracer is also be included.
+The Packet Tracer file is also be included.
 
 <img width="975" height="617" alt="image" src="https://github.com/user-attachments/assets/db96f81b-eb09-4a9f-a998-d4d9deba0dea" />
 
