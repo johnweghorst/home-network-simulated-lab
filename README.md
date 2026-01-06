@@ -444,7 +444,7 @@ SSH is NOT reachable by our untrusted Gaming Laptop in VLAN 20 because of the AC
 
 # WCL Configuration
 
-With the router and switch configurations completed, all that’s left is the WCL. I’ll be using a WLC here because it’s what’s available in Packet Tracer. In real life, I would be using a combo unit like a Ubiquiti Dream Machine.
+With the router and switch configurations completed, all that’s left is the WCL. I’ll be using a WLC here because it’s what’s available in Packet Tracer. In real life, I would be using a combo unit like a Ubiquiti Dream Machine Pro + Unifi Access Point.
 
 First up, turn the LAP on. 
 
@@ -585,7 +585,7 @@ We do the same for our Trusted network, but I won’t go over the steps again.
 
 Thank you very much for reading this lab. It was a doozy figuring out how to make this topology work in Packet Tracer, but I accomplished my goal of how I would set up a home network within the limitations of Packet Tracer. It also resolidified the knowledge I obtained studying for and obtaining my CCNA certificate. 
 
-In reality, I would just purchase an all-in-one unit that can perform all of these functions in one like a Ubiquiti Dream Machine or a pfSense firewall. Those labs may come next. Thank you for reading.
+In reality, I would just purchase an all-in-one unit that can perform all of these functions in one like a Ubiquiti Dream Machine Pro with an Access Point. Those labs may come next. Thank you for reading.
 
 
 
