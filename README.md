@@ -135,10 +135,10 @@ vlan 99
 name Management
 vlan 999
 name Native
+```
 
 We can check our configurations with the show vlan brief command:
 
-```
 <img width="602" height="309" alt="image" src="https://github.com/user-attachments/assets/5921e698-64af-467c-9b04-f5451e5eb653" />
 
 ```
