@@ -355,6 +355,7 @@ will show the translated internal addresses as the router’s public IP address.
 # Access Control Lists
 
 This batch of ACLs are what’s going to allow us to actually segment our network and are the backbone of why I designed my network this way. The Trusted network can access everything, Gaming and IoT/Guest networks get internet access only and can’t connect to our other networks. Only devices in the Trusted network can access the management devices via SSH.  We’ll also need to add special permissions for DHCP, since when devices don’t have an IP address and they send DHCP Discover messages, their source address is 0.0.0.0. Likewise, the DHCP server response broadcasts to 255.255.255.255. ACLs are applied inbound on our ports to stop unwanted traffic as early as possible. I won’t discuss wildcard masks heavily here as they are very customizable, but the basic way to implement them is they are the opposite of the subnet mask for the network you’re working with.
+
 Trusted VLAN ACL:
 ```
 ip access-list extended Trusted_In
