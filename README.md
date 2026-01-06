@@ -473,13 +473,18 @@ We’ll create a quick management network here and create our other Wi-Fi networ
 
 Once on the “Saving the configuration…” screen, press the Fast Forward button at the bottom left corner a bunch of times. This is a known issue and limitation with Packet Tracer in that it might get hung up here during WLC setup.
 
+
 <img width="358" height="89" alt="image" src="https://github.com/user-attachments/assets/e8f46779-04f6-4451-b8c8-fa7c8527acc3" />
+
 
 <img width="595" height="402" alt="image" src="https://github.com/user-attachments/assets/d965b2e2-1c4b-4e0f-9f20-83e28a8270c3" />
 
+
 This screen will likely hang. Just exit out and head to https://192.168.99.3 and you should be greeted with this screen.
 
+
 <img width="975" height="1026" alt="image" src="https://github.com/user-attachments/assets/cab50600-7d20-4938-8aee-59774c8f320c" />
+
 
 Log in and we can create are greeted by the management screen.
 
