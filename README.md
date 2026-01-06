@@ -464,12 +464,6 @@ Head to http://192.168.99.3. We must create an admin account first before being 
 
 ***SPECIAL NOTE In Packet Tracer, if you set the management VLAN to the correct ID (99 in this case), and change the switch’s trunk to the WLC back to Native VLAN 999 for best practice, it will not work and we have to have it set at VLAN 0, which Packet Tracer treats as untagged traffic for the WLC management interface. This seems to be a Packet Tracer issue and is not best practice in the real world. In reality we should have the Management VLAN ID as 99 and set the native VLAN on the switch end of the trunk to a “black hole” VLAN (999 in our case).***
 
-
-
-We’ll create a quick management network here and create our other Wi-Fi networks in the proper GUI.
-
-<img width="975" height="823" alt="image" src="https://github.com/user-attachments/assets/744967c9-5911-446e-baa7-48ba405b178e" />
-
 We’ll create a quick management network here and create our other Wi-Fi networks in the proper GUI.
 
 <img width="975" height="823" alt="image" src="https://github.com/user-attachments/assets/4959021c-2ec5-4cc3-ba10-119e11505804" />
