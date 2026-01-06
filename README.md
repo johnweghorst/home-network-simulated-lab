@@ -316,7 +316,7 @@ Management VLAN is not needed for NAT as we won’t be connecting to the interne
 
 Double check our configurations in the running config:
 
-<img width="892" height="1058" alt="image" src="https://github.com/user-attachments/assets/90eb5213-4213-415b-ad7e-03244f51e82b" />
+<img width="553" height="695" alt="image" src="https://github.com/user-attachments/assets/54600421-c571-4cf4-ac98-490075e6f446" />
 
 # NAT overload (PAT) configuration
 
