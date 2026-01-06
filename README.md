@@ -531,7 +531,7 @@ We will also set up the WPA2-PSK here. Click on Security then choose WPA+WPA2 fr
 
 
 
-***A note about the DHCP server. Instead of using the router’s DHCP pool like we configured, Packet Tracer will not correctly assign DHCP clients addresses from there. It will give addresses from the management domain. This is not how a proper WLC that’s correctly configured like we have done should function. However, we can set up a DHCP scope on the WLC for our wireless devices on the WLC. This will allow us to get the correct IPs from our configured DHCP pool addresses, but sometimes they will still get overridden by this bug unless the DHCP pool from the router is removed. We don’t want to do this because our Gaming Laptop is plugged in physically to the switch. This is ***NOT*** how it should function on real hardware and is a limitation or bug with Packet Tracer.***
+***A note about the DHCP server. Instead of using the router’s DHCP pool like we configured, Packet Tracer will not correctly assign DHCP clients addresses from there. It will give addresses from the management domain. This is not how a proper WLC that’s correctly configured like we have done should function. However, we can set up a DHCP scope on the WLC for our wireless devices on the WLC. This will allow us to get the correct IPs from our configured DHCP pool addresses, but sometimes they will still get overridden by this bug unless the DHCP pool from the router is removed. We don’t want to do this because our Gaming Laptop is plugged in physically to the switch. This is ***NOT*** how it should function on real hardware and is a limitation or bug with Packet Tracer. It is also why the Gaming wireless network has a DHCP server address of the WLC.***
 
 
 
