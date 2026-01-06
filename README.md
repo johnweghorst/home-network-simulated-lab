@@ -459,7 +459,7 @@ Head to http://192.168.99.3. We must create an admin account first before being 
 
 
 
-***SPECIAL NOTE **In Packet Tracer, if you set the management VLAN to the correct ID (99 in this case), and change the switch’s trunk to the WLC back to Native VLAN 999 for best practice, it will not work and we have to have it set at VLAN 0, which Packet Tracer treats as untagged traffic for the WLC management interface. This seems to be a Packet Tracer issue and is not best practice in the real world. In reality we should have the Management VLAN ID as 99 and set the native VLAN on the switch end of the trunk to a “black hole” VLAN (999 in our case).***
+***SPECIAL NOTE In Packet Tracer, if you set the management VLAN to the correct ID (99 in this case), and change the switch’s trunk to the WLC back to Native VLAN 999 for best practice, it will not work and we have to have it set at VLAN 0, which Packet Tracer treats as untagged traffic for the WLC management interface. This seems to be a Packet Tracer issue and is not best practice in the real world. In reality we should have the Management VLAN ID as 99 and set the native VLAN on the switch end of the trunk to a “black hole” VLAN (999 in our case).***
 
 
 
@@ -474,6 +474,7 @@ We’ll create a quick management network here and create our other Wi-Fi networ
 Once on the “Saving the configuration…” screen, press the Fast Forward button at the bottom left corner a bunch of times. This is a known issue and limitation with Packet Tracer in that it might get hung up here during WLC setup.
 
 <img width="358" height="89" alt="image" src="https://github.com/user-attachments/assets/e8f46779-04f6-4451-b8c8-fa7c8527acc3" />
+
 <img width="595" height="402" alt="image" src="https://github.com/user-attachments/assets/d965b2e2-1c4b-4e0f-9f20-83e28a8270c3" />
 
 This screen will likely hang. Just exit out and head to https://192.168.99.3 and you should be greeted with this screen.
@@ -555,6 +556,7 @@ We’ll now set up our IoT/Guest network the same way, then this lab will be com
 Follow the same steps in mapping an interface, setting up a WLAN, and setting up the DHCP scope for the IoT/Guest network. VLAN ID is 30.
 
 <img width="861" height="325" alt="image" src="https://github.com/user-attachments/assets/b3582c3b-8f6a-4e3e-bfdd-f037fd3e0f9a" />
+
 <img width="896" height="1350" alt="image" src="https://github.com/user-attachments/assets/694454ef-e8e8-4518-a716-558d48fba1cf" />
 
 WLANs tab, Create New:
