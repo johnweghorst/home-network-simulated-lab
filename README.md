@@ -457,7 +457,11 @@ Head to http://192.168.99.3. We must create an admin account first before being 
 
 <img width="975" height="994" alt="image" src="https://github.com/user-attachments/assets/fa91aa48-c021-46d2-90ef-1cf55deeb86d" />
 
-***SPECIAL NOTE*** In Packet Tracer, if you set the management VLAN to the correct ID (99 in this case), and change the switch’s trunk to the WLC back to Native VLAN 999 for best practice, it will not work and we have to have it set at VLAN 0, which Packet Tracer treats as untagged traffic for the WLC management interface. This seems to be a Packet Tracer issue and is not best practice in the real world. In reality we should have the Management VLAN ID as 99 and set the native VLAN on the switch end of the trunk to a “black hole” VLAN (999 in our case).
+
+
+***SPECIAL NOTE **In Packet Tracer, if you set the management VLAN to the correct ID (99 in this case), and change the switch’s trunk to the WLC back to Native VLAN 999 for best practice, it will not work and we have to have it set at VLAN 0, which Packet Tracer treats as untagged traffic for the WLC management interface. This seems to be a Packet Tracer issue and is not best practice in the real world. In reality we should have the Management VLAN ID as 99 and set the native VLAN on the switch end of the trunk to a “black hole” VLAN (999 in our case).***
+
+
 
 We’ll create a quick management network here and create our other Wi-Fi networks in the proper GUI.
 
@@ -522,7 +526,11 @@ We will also set up the WPA2-PSK here. Click on Security then choose WPA+WPA2 fr
 
 <img width="856" height="1056" alt="image" src="https://github.com/user-attachments/assets/d9a3229f-f510-4fbf-859d-783ce54171c5" />
 
+
+
 ***A note about the DHCP server. Instead of using the router’s DHCP pool like we configured, Packet Tracer will not correctly assign DHCP clients addresses from there. It will give addresses from the management domain. This is not how a proper WLC that’s correctly configured like we have done should function. However, we can set up a DHCP scope on the WLC for our wireless devices on the WLC. This will allow us to get the correct IPs from our configured DHCP pool addresses, but sometimes they will still get overridden by this bug unless the DHCP pool from the router is removed. We don’t want to do this because our Gaming Laptop is plugged in physically to the switch. This is ***NOT*** how it should function on real hardware and is a limitation or bug with Packet Tracer.***
+
+
 
 Head to Controller > Internal DHCP Server > DHCP Scope. Enter the configurations like so:
 
