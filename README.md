@@ -111,16 +111,6 @@ Here is what’s shown in the running config.
 
 <img width="598" height="156" alt="image" src="https://github.com/user-attachments/assets/ccbc52af-e5f8-4068-90d1-c9a568f3f4d4" />
 
-We’ll go ahead and set up the DNS server now as well. The server will have a default gateway of HomeRouter’s outside interface IP address (203.0.113.1). Open up the server and head to Desktop > IP Configuration.
-
-<img width="975" height="981" alt="image" src="https://github.com/user-attachments/assets/81b8faea-378e-49eb-a334-0c7ec4136ce3" />
-
-Next, we’ll add some domain names to the server for address resolution. Head to the Services tab then choose DNS. Turn it on and add some A records. An A record maps a specific IPv4 address to a domain name.
-
-<img width="975" height="975" alt="image" src="https://github.com/user-attachments/assets/6a8b56ec-9d97-47c4-b290-5bdac293c27e" />
-
-That’s all for the DNS server. We’ll set up the switch now so we can start using ping to verify connectivity.
-
 And of course with everything configured, we can't forget to save them to our startup config in NVRAM. The commands
 
 ```
@@ -134,6 +124,20 @@ write or wr for short
 will do this.
 
 <img width="501" height="256" alt="image" src="https://github.com/user-attachments/assets/fa21bf60-73d5-4e2c-aefc-53983b37b974" />
+
+# DNS Server
+
+We’ll go ahead and set up the DNS server now as well. The server will have a default gateway of HomeRouter’s outside interface IP address (203.0.113.1). Open up the server and head to Desktop > IP Configuration.
+
+<img width="975" height="981" alt="image" src="https://github.com/user-attachments/assets/81b8faea-378e-49eb-a334-0c7ec4136ce3" />
+
+Next, we’ll add some domain names to the server for address resolution. Head to the Services tab then choose DNS. Turn it on and add some A records. An A record maps a specific IPv4 address to a domain name.
+
+<img width="975" height="975" alt="image" src="https://github.com/user-attachments/assets/6a8b56ec-9d97-47c4-b290-5bdac293c27e" />
+
+That’s all for the DNS server. We’ll set up the switch now so we can start using ping to verify connectivity.
+
+
 
 
 # Switch configuration
