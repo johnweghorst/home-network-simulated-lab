@@ -121,6 +121,21 @@ Next, we’ll add some domain names to the server for address resolution. Head t
 
 That’s all for the DNS server. We’ll set up the switch now so we can start using ping to verify connectivity.
 
+And of course with everything configured, we can't forget to save them to our startup config in NVRAM. The commands
+
+```
+copy run start
+```
+or
+```
+write or wr for short
+```
+
+will do this.
+
+<img width="501" height="256" alt="image" src="https://github.com/user-attachments/assets/fa21bf60-73d5-4e2c-aefc-53983b37b974" />
+
+
 # Switch configuration
 Perform the same basic set up steps on the switch as we did the router. After, we’ll configure the VLANs and the trunks on the switch, one to the router and one to our WLC, then add our wired connections to their respective VLANs. We will also set up the switch’s SVI (switched virtual interface) so we can connect with SSH over the network. This will require adding a default gateway to the router as well. It is best practice to change the native VLAN to an unused VLAN. For the WLC, the trunk's native VLAN must be set to carry untagged frames, which is what our switch will be receiving here if the native VLAN is set to 99, in order for the setup to function correctly. This is one of the limitations of Packet Tracer and not how it should function on real hardware. SSH configuration will be shown again for redundancy and because it is a crucial step. From global config mode:
 
@@ -200,6 +215,11 @@ no shut
 exit
 ip default-gateway 192.168.99.1
 ```
+
+And save our configurations:
+
+<img width="341" height="101" alt="image" src="https://github.com/user-attachments/assets/be3ceb61-34e4-42b4-9472-8c19f692c2e9" />
+
 
 # Router configuration continued 
 Back at the router, we’ll set the router’s outside IP address now as well.
@@ -387,7 +407,7 @@ deny ip 192.168.30.0 0.0.0.255 192.168.10.0 0.0.0.255
 deny ip 192.168.30.0 0.0.0.255 192.168.20.0 0.0.0.255
 deny ip 192.168.30.0 0.0.0.255 192.168.99.0 0.0.0.255
 permit ip 192.168.30.0 0.0.0.255 anyinterface g0/0.30
- ip access-group IoT_Guest_In in
+ip access-group IoT_Guest_In in
 ```
 
 Configure the following on both the router and switch:
@@ -412,6 +432,10 @@ show run | include interface|ip access-group
 And the VTY lines:
 
 <img width="564" height="291" alt="image" src="https://github.com/user-attachments/assets/c1521687-01a9-4be9-952a-36e33b243cae" />
+
+Save it:
+
+<img width="336" height="105" alt="image" src="https://github.com/user-attachments/assets/a1894138-7e40-4eab-a8a1-c60b69b14633" />
 
 # Testing connectivity
 
