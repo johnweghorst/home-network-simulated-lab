@@ -269,7 +269,7 @@ no shut
 ```
 Configurations can be checked with show ip int brief.
 
-<img width="975" height="193" alt="image" src="https://github.com/user-attachments/assets/463e680e-5aad-49bf-8f4a-a5f123fc571c" />
+<img width="1048" height="206" alt="image" src="https://github.com/user-attachments/assets/5bd33807-a149-4df1-86f0-fdb8b29bc723" />
 
 Next, we’ll set up our DHCP on the router. While this isn’t completely necessary in this setup, we’re going to do for future proofing any devices we may want to add in the future. Static IPs on our devices would work just as well for the non-Guest networks.
 From global config mode:
